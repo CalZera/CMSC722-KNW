@@ -1,0 +1,52 @@
+\begin{thebibliography}{1}
+
+\bibitem{garoufi2011combining}
+Konstantina Garoufi and Alexander Koller.
+\newblock Combining symbolic and corpus-based approaches for the generation of
+  successful referring expressions.
+\newblock In {\em Proceedings of the 13th European Workshop on Natural Language
+  Generation}, pages 121--131. Association for Computational Linguistics, 2011.
+
+\bibitem{garoufi2011potsdam}
+Konstantina Garoufi and Alexander Koller.
+\newblock The potsdam nlg systems at the give-2.5 challenge.
+\newblock In {\em Proceedings of the 13th European Workshop on Natural Language
+  Generation}, pages 307--311. Association for Computational Linguistics, 2011.
+
+\bibitem{garoufi2014generation}
+Konstantina Garoufi and Alexander Koller.
+\newblock Generation of effective referring expressions in situated context.
+\newblock {\em Language, Cognition and Neuroscience}, 29(8):986--1001, 2014.
+
+\bibitem{crisp07}
+Alexander Koller and Matthew Stone*.
+\newblock Sentence generation as planning.
+\newblock In {\em Proceedings of the 45th Annual Meeting of the Association of
+  Computational Linguistics (ACL)}, pages 336--343, Prague, 2007.
+
+\bibitem{koller2010first}
+Alexander Koller, Kristina Striegnitz, Donna Byron, Justine Cassell, Robert
+  Dale, Johanna Moore, and Jon Oberlander.
+\newblock The first challenge on generating instructions in virtual
+  environments.
+\newblock In {\em Empirical Methods in Natural Language Generation}, pages
+  328--352. Springer, 2010.
+
+\bibitem{koller2010report}
+Alexander Koller, Kristina Striegnitz, Andrew Gargett, Donna Byron, Justine
+  Cassell, Robert Dale, Johanna Moore, and Jon Oberlander.
+\newblock Report on the second nlg challenge on generating instructions in
+  virtual environments (give-2).
+\newblock In {\em Proceedings of the 6th international natural language
+  generation conference}, pages 243--250. Association for Computational
+  Linguistics, 2010.
+
+\bibitem{striegnitz2011report}
+Kristina Striegnitz, Alexandre Denis, Andrew Gargett, Konstantina Garoufi,
+  Alexander Koller, and Mari{\"e}t Theune.
+\newblock Report on the second second challenge on generating instructions in
+  virtual environments (give-2.5).
+\newblock In {\em Proceedings of the 13th European Workshop on Natural Language
+  Generation}, pages 270--279. Association for Computational Linguistics, 2011.
+
+\end{thebibliography}
