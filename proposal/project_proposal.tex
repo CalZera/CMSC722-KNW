@@ -65,30 +65,33 @@
 \maketitle
 
 \begin{abstract}
-This project aims to create a Natural Language Generation system
-for giving instructions in virtual world with different level of abstractions.
-We will try to incorporate hierarchical planner into the Potsdam Natural Language Generation systems
-which originally use forward search for planning.
+In this project, we aim to create a Natural Language Generation system
+that gives instructions in a virtual world at different levels of abstractions.
+We incorporate a hierarchical planner into the Potsdam Natural Language Generation system,
+which originally uses forward search for planning.
 \end{abstract}
 
 \section{Introduction}
 The Challenge on Generating Instruction in Virtual Environment (GIVE) \cite{koller2010first}
+% Phil: TODO I don't understand the phrase ``evaluation shared task''
 is an evaluation shared task for real-time natural language generation (NLG) systems.
-The system objective is to guide a human instruction follower (IF) to complete a treasure-hunting task
+The system's objective is guiding a human instruction follower (IF) to complete a treasure-hunting task
 in a 3D virtual world.
-We put our interests into the recent version of GIVE, namely, GIVE-2.5 \cite{striegnitz2011report}.
-GIVE-2.5 is the second second sequel of GIVE challenge which is an identical challenge
-to GIVE-2 \cite{koller2010report} but was hold again for a better timing.
+We are interested in GIVE-2.5 \cite{striegnitz2011report}, a recent version of GIVE.
+GIVE-2.5 is the second sequel to GIVE and is an identical challenge
+to GIVE-2 \cite{koller2010report} but was held again for a better timing.
+% Phil: TODO what does the above mean?
 
-Users will start the 3D game from the website.
-First, users will download the 3D client which allows them to interact with the 3D world.
-Next, the client will connect to the NLG system.
-There are 3 evaluation worlds with different difficulties as depicted in Figure.~\ref{fig:layout}.
-World 1 has a simple layout and buttons are easily identified.
-World 2 buttons are cluttered with a lot of buttons with the same colors but the user can still refer
-to the room by the color of the furnitures.
-World 3 has a maze-like layout in one room, multiple alarm tiles in another room
-and several doors with a lot of plants in the last room.
+To start the 3D game, the user downloads the 3D from the website.
+The 3D client then connects to the NLG system.
+There are 3 evaluation worlds with different levels of difficulty as described in figure~\ref{fig:layout}.
+World 1 has a simple layout with easily identified buttons.
+World 2 has many same-colored buttons, but the user can refer
+to the room by the colors of the furnitures.
+World 3 has a maze-like layout in one room, multiple alarm tiles
+% Phil: what does ``multiple alarm tiles'' mean?
+in another room,
+and multiple doors with a lot of plants in the last room.
 
 \begin{figure}[hbt!]
 \centering
@@ -97,26 +100,25 @@ and several doors with a lot of plants in the last room.
 \label{fig:layout}
 \end{figure}
 
-The task is for a user to pick up a trophy from a safe which should be preceded
-by pushing a sequence of buttons.
-There are some obstacles such as some floor tiles that can generate an alarm signal
-which will cause a user to lose the game if the alarms are not deactivated in advanced.
-In addition, there are many unrelated objects such as lamps or plants which are dummy
-and will be used as landmarks by the NLG systems.
+The user's task is picking up a trophy from a safe after pushing a sequence of buttons.
+There are obstacles such as floor tiles that can generate an alarm signal,
+which unless deactivated in advance, causes the user to lose the game.
+In addition, the NLG system uses many objects such as lamps and plants as landmarks.
 The demo can be found at \url{https://www.youtube.com/watch?v=0RSin0HChno}.
 
-The main different between GIVE and its sequels are the ability for a user to move.
-In GIVE, there are discrete steps so `three steps' and `turn left' will be precise actions.
-While in GIVE-2 and GIVE-2.5, a user can move freely so the phrases like `three steps'
-and `turn left' will be more difficult to predict their effects.
+GIVE's main difference from its sequels is in the user's movements.
+In GIVE, these are discrete steps, so `taking three steps' and `turning left' are precise actions.
+On the other hand, in GIVE-2 and GIVE-2.5, the user moves more freely,
+so the effects of such phrases are more difficult to predict.
 
-We are interested in the Potsdam NLG systems \cite{garoufi2011potsdam} because they use AI planning
-technologies for NLG.
-However, there are still a lot of things that can be tried.
-For example, the Potsdam NLG systems use Forward Search (FF).
-Their outputs provide just one level of abstraction.
-So, if hierarchical planning is used, we expect the output instructions to be more structured
-that will lead to the better instruction understanding.
+We are interested in the Potsdam NLG systems \cite{garoufi2011potsdam}
+because they use AI planning technologies for NLG.
+However, there are modifications to be tried.
+For example, the Potsdam NLG systems use Forward Search (FF),
+so their outputs come in one flat level of details.
+We expect the use of a hierarchical planning enables outputting instructions
+at multiple levels of abstraction, making the system more practical
+for multiple audience.
 
 \section{Technical Approach}
 
@@ -133,8 +135,8 @@ Evaluation
 
 Task to Accomplish:
 \begin{itemize}
-  \item Setup the client, NLG server and the matchmaker.
-  \item Understand their NLG system implementation.
+  \item Set up the client, NLG server, and the matchmaker.
+  \item Understand the NLG system implementation.
   \item Make a hierarchical planner version of their NLG system.
   \item Compare the results.
 \end{itemize}
@@ -145,7 +147,7 @@ Timeline:
 
 \begin{description}
   \item[March] \hfill \\
-   Setup the client, NLG server and the matchmaker.
+  Set up the client, NLG server and the matchmaker.
   \item[March] \hfill \\
   Understand their NLG system implementation.
   \item[April] \hfill \\
