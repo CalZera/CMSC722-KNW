@@ -1,3 +1,7 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: project_proposal.aux
 The style file: plain.bst
 Database file #1: project_proposal.bib
+Warning--string name "jair" is undefined
+--line 69 of file project_proposal.bib
+Warning--empty journal in hoffmann:nebel:jair-01
+(There were 2 warnings)
