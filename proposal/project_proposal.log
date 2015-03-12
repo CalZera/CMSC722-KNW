@@ -1,10 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.12.13)  11 MAR 2015 17:42
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.12.13)  11 MAR 2015 22:38
 entering extended mode
-**C:/Users/Peratham/Documents/Courses/Spring*2015/CMSC722/proposal/project_prop
-osal.tex
-
-("C:/Users/Peratham/Documents/Courses/Spring 2015/CMSC722/proposal/project_prop
-osal.tex"
+**C:/Users/Peratham/Documents/GitHub/CMSC722-KNW/proposal/project_proposal.tex
+(C:/Users/Peratham/Documents/GitHub/CMSC722-KNW/proposal/project_proposal.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -557,22 +554,83 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip100
 )
-("C:\Users\Peratham\Documents\Courses\Spring 2015\CMSC722\proposal\project_prop
-osal.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip101
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks22
+\ex@=\dimen140
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen141
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count113
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count114
+\leftroot@=\count115
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count116
+\DOTSCASE@=\count117
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen142
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count118
+\c@MaxMatrixCols=\count119
+\dotsspace@=\muskip11
+\c@parentequation=\count120
+\dspbrk@lvl=\count121
+\tag@help=\toks23
+\row@=\count122
+\column@=\count123
+\maxfields@=\count124
+\andhelp@=\toks24
+\eqnshift@=\dimen143
+\alignsep@=\dimen144
+\tagshift@=\dimen145
+\tagwidth@=\dimen146
+\totwidth@=\dimen147
+\lineht@=\dimen148
+\@envbody=\toks25
+\multlinegap=\skip102
+\multlinetaggap=\skip103
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(C:\Users\Peratham\Documents\GitHub\CMSC722-KNW\proposal\project_proposal.aux
+
+LaTeX Warning: Label `overflow' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -610,100 +668,116 @@ LaTeX Font Info:    ... okay on input line 64.
 
 (C:\Users\Peratham\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count113
-\scratchdimen=\dimen140
-\scratchbox=\box26
-\nofMPsegments=\count114
-\nofMParguments=\count115
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count116
-\MPscratchDim=\dimen141
-\MPnumerator=\count117
-\makeMPintoPDFobject=\count118
-\everyMPtoPDFconversion=\toks23
+\scratchcounter=\count125
+\scratchdimen=\dimen149
+\scratchbox=\box28
+\nofMPsegments=\count126
+\nofMParguments=\count127
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count128
+\MPscratchDim=\dimen150
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
+\everyMPtoPDFconversion=\toks28
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box27
-Package hyperref Info: Link coloring OFF on input line 64.
+\AtBeginShipoutBox=\box29
+Package hyperref Info: Link coloring OFF on input line 65.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count119
+\c@section@level=\count131
 )
-LaTeX Info: Redefining \ref on input line 64.
-LaTeX Info: Redefining \pageref on input line 64.
-LaTeX Info: Redefining \nameref on input line 64.
+LaTeX Info: Redefining \ref on input line 65.
+LaTeX Info: Redefining \pageref on input line 65.
+LaTeX Info: Redefining \nameref on input line 65.
 
-("C:\Users\Peratham\Documents\Courses\Spring 2015\CMSC722\proposal\project_prop
-osal.out")
-("C:\Users\Peratham\Documents\Courses\Spring 2015\CMSC722\proposal\project_prop
-osal.out")
+(C:\Users\Peratham\Documents\GitHub\CMSC722-KNW\proposal\project_proposal.out)
+(C:\Users\Peratham\Documents\GitHub\CMSC722-KNW\proposal\project_proposal.out)
 \@outlinefile=\write3
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 66.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 66.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 66.
- <images/layout.jpg, id=27, 277.035pt x 80.55093pt>
-File: images/layout.jpg Graphic file (type jpg)
 
-<use images/layout.jpg>
-Package pdftex.def Info: images/layout.jpg used on input line 78.
+<images/layout.jpg, id=27, 277.035pt x 80.55093pt>
+File: images/layout.jpg Graphic file (type jpg)
+ <use images/layout.jpg>
+Package pdftex.def Info: images/layout.jpg used on input line 96.
 (pdftex.def)             Requested size: 341.43306pt x 99.27617pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 83.
- [1
+
+[1
 
 {C:/Users/Peratham/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 101.
+<images/tag.jpg, id=58, 575.14874pt x 158.84344pt>
+File: images/tag.jpg Graphic file (type jpg)
+ <use images/tag.jpg>
+Package pdftex.def Info: images/tag.jpg used on input line 137.
+(pdftex.def)             Requested size: 250.38425pt x 69.14966pt.
 
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+<images/cond.jpg, id=59, 374.90062pt x 199.49532pt>
+File: images/cond.jpg Graphic file (type jpg)
+ <use images/cond.jpg>
+Package pdftex.def Info: images/cond.jpg used on input line 139.
+(pdftex.def)             Requested size: 250.38425pt x 133.23802pt.
+
+[2 <C:/Users/Peratham/Documents/GitHub/CMSC722-KNW/proposal/images/layout.jpg>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 156.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
- [2 <C:/Users/Peratham/Documents/Courses/Spring 2015/CMSC722/proposal/images/la
-yout.jpg>]
-("C:\Users\Peratham\Documents\Courses\Spring 2015\CMSC722\proposal\project_prop
-osal.bbl" [3])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 131.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 156.
+ [3 <C:/Users/Peratham/Documents/GitHub/CMSC722-KNW/proposal/images/tag.jpg> <C
+:/Users/Peratham/Documents/GitHub/CMSC722-KNW/proposal/images/cond.jpg>]
+(C:\Users\Peratham\Documents\GitHub\CMSC722-KNW\proposal\project_proposal.bbl
+[4])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 188.
+ [5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 188.
 
-("C:\Users\Peratham\Documents\Courses\Spring 2015\CMSC722\proposal\project_prop
-osal.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 131.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 131.
+(C:\Users\Peratham\Documents\GitHub\CMSC722-KNW\proposal\project_proposal.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 188.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 188.
 Package rerunfilecheck Info: File `project_proposal.out' has not changed.
-(rerunfilecheck)             Checksum: BA90B9A4B644AF887DF291579EEADA87;249.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 131.
+(rerunfilecheck)             Checksum: 380A4337EEFE472D6A27BA4DA6FC8D50;249.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 188.
  ) 
 Here is how much of TeX's memory you used:
- 7600 strings out of 493921
- 115989 string characters out of 3144866
- 205716 words of memory out of 3000000
- 10794 multiletter control sequences out of 15000+200000
- 9927 words of font info for 35 fonts, out of 3000000 for 9000
+ 8208 strings out of 493921
+ 122915 string characters out of 3144866
+ 217417 words of memory out of 3000000
+ 11375 multiletter control sequences out of 15000+200000
+ 11124 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,10n,43p,738b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,10n,47p,727b,464s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on project_proposal.pdf (4 pages, 145946 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on project_proposal.pdf (5 pages, 302989 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 161 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
