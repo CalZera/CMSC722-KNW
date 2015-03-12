@@ -123,10 +123,21 @@ for multiple audience.
 
 \section{Technical Approach}
 
+The Potsdam NLG system \cite{garoufi2011combining, garoufi2011potsdam, garoufi2014generation}
+is based on the CRISP system \cite{crisp07},
+which is an approach to generate natural language as a planning problem.
+The CRISP system can generate individual noun phrases.
+A follow up work \cite{scrisp-10} enables the system to generate an entire discourse.
 
-The Potsdam NLG system \cite{garoufi2011combining, garoufi2011potsdam, garoufi2014generation} is based on the previous work, the CRISP system \cite{crisp07}, which is an approach to generate natural language as a planning problem. the CRISP system can generate individual noun phrases. Their follow up work \cite{scrisp-10} extends the functionality to be able to generate an entire discourse.
-
-Their contributions are by transforming the tree-adjoining grammar (TAG) into the Planning Domain Definition Language (PDDL). Then, they use fast forward search \cite{hoffmann:nebel:jair-01} to generate a dialog plan which will output a sequence of lexicons according to preconditions from both linguistics and non-linguistics context. The lexicons will be organized by an off-the-shelf planner into correct and distinguishing descriptions of the objects in the context. Figure.~\ref{fig:exampleTAG} depicts an example of the CRISP system that converts the TAG grammar to the planning problem for a phrase `the red button'.
+The authors' contribution is transforming the tree-adjoining grammar (TAG)
+into the Planning Domain Definition Language (PDDL).
+Next, they use fast forward search \cite{hoffmann:nebel:jair-01} to generate
+a dialog plan, which outputs a sequence of lexicons according to preconditions
+from both linguistics and non-linguistics context.
+An off-the-shelf planner organizes the lexicons into correct
+and distinguishing descriptions of the objects in context.
+Figure~\ref{fig:exampleTAG} depicts an example of the CRISP system,
+which converts the TAG grammar to the planning problem for a phrase `the red button'.
 
 \begin{figure}[hbt!]
 \centering
@@ -137,13 +148,23 @@ Their contributions are by transforming the tree-adjoining grammar (TAG) into th
 \label{fig:exampleTAG}
 \end{figure}
 
-For evaluation, there are manual evaluation and automatic evaluation \cite{garoufi2014generation}. The manual evaluation will try to measure how well the users follow the instructions as IF which may be in term of success rate or how fast the users can solve the task. However, our project is small so we lean to automatic evaluation. \cite{garoufi2014generation} proposed a maximum entropy model for automatic evaluation which models the success rate $P(succ(r) = 1|r,s)$ from the attribute types in the sentence $a_j(r)$ according to a referential scene $c_i(s)$. 
+Evaluation is performed both manually and automatically \cite{garoufi2014generation}.
+Manual evaluation measures how well the user follows the instructions
+% TODO
+as IF which may be in term of success rate or how fast the users can solve the task.
+Our project is small, so we lean towards automatic evaluation.
+% TODO don't use cite as noun
+\cite{garoufi2014generation} proposes a maximum entropy model for automatic evaluation,
+which models the success rate $P(succ(r) = 1|r,s)$ from the attribute
+types in the sentence $a_j(r)$ according to a referential scene $c_i(s)$. 
 
 \begin{equation} \label{auto_eqn}
 P(succ(r) = 1| r, s) =\frac{1}{e^{\sum_j (v_j(s)*a_j(r) + w_0)} + 1} ,
 \end{equation}
 
-where $v_j(s) = \sum_i w_{ij} * c_i(s)$. The weights $w_{ij}$ are estimated from the corpus. Reusing the trained model may be a good choice.
+where $v_j(s) = \sum_i w_{ij} * c_i(s)$.
+The weights $w_{ij}$ are estimated from the corpus.
+Reusing the trained model may be a good choice.
 
 \section{Project Management}
 
