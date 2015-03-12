@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{scrisp-10}
+Konstantina Garoufi and Alexander Koller*.
+\newblock Automated planning for situated natural language generation.
+\newblock In {\em Proceedings of the 48th Annual Meeting of the Association for
+  Computational Linguistics (ACL)}, Uppsala, 2010.
+
 \bibitem{garoufi2011combining}
 Konstantina Garoufi and Alexander Koller.
 \newblock Combining symbolic and corpus-based approaches for the generation of
@@ -17,6 +23,12 @@ Konstantina Garoufi and Alexander Koller.
 Konstantina Garoufi and Alexander Koller.
 \newblock Generation of effective referring expressions in situated context.
 \newblock {\em Language, Cognition and Neuroscience}, 29(8):986--1001, 2014.
+
+\bibitem{hoffmann:nebel:jair-01}
+J{\"o}rg Hoffmann and Bernhard Nebel.
+\newblock The {FF} planning system: Fast plan generation through heuristic
+  search.
+\newblock 14:253--302, 2001.
 
 \bibitem{crisp07}
 Alexander Koller and Matthew Stone*.
