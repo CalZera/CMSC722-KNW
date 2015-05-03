@@ -89,7 +89,14 @@ Pyhop represents states of the world using Python variable binding
  just Python functions with the current state as an argument.
 
 %% TODO what is SePRE
+Sequential Refinement Planning Engine (SeRPE) finds the best plan,
+ which consists of an action sequence, for a refinement planning. 
+Instead of an effect, a refinement planning will have a body which
+ is a program. The program can have assignments, actions, tasks or
+ even some control structures like if-then-else or while-loop.
 
+SeRPE assumes all actions to be deterministic and all methods are 
+sequential and cannot be executed in parallel.
 
 \section{Related work}
 
@@ -114,13 +121,16 @@ Our implementation is available online at
 
 For an example, we modified the simple_travel_example given in Pyhop.
 We made a situation where travel_by_taxi can cause failure because
-the money is not enough. So, we add
+the money is not enough. So, we add a refinement action 'go_to_bank'
+which will help increase the money and execute the 'travel' task again.
 
 %% TODO code screenshots
 
 \section{Conclusion}
 
-We have implemented a Pyhop extension for SePRE.
+We have attempted to implement an Pyhop extension for SePRE.
+By using Python's 'eval' function, we can simulate the description 
+action model for SeRPE.
 
 \bibliographystyle{plain}
 \bibliography{report}
