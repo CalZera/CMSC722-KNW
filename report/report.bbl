@@ -1,3 +1,14 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{serpe-draft}
+Paolo~Traverso Malik~Ghallab, Dana S.~Nau.
+\newblock {\em Automated Planning and Acting - DRAFT 2015-04-24}, chapter 3.4.1
+  Sequential Refinement Planning.
+\newblock Unpublished Draft, April 2015.
+
+\bibitem{pyhop}
+Dana Nau.
+\newblock Pyhop, a simple htn planning system written in python.
+\newblock \url{https://bitbucket.org/dananau/pyhop}, 2013.
 
 \end{thebibliography}
