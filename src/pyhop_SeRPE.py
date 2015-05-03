@@ -201,6 +201,25 @@ def pyhop_SeRPE(state, tasks, verbose=0):
     if verbose > 0: print('** result =', result, '\n')
     return result
 
+def execute_action(action, state, old_state, *action_args):
+    if state == False:
+        return False
+    if action in operators:  # predict action
+        operator = operators[action]       
+        if len(action_args) > 1: # deal with the training comma in the tuple
+            result = eval('operator(copy.deepcopy(state),action_args)')
+        else:
+            result = eval('operator(copy.deepcopy(state),action_args[0])')
+        if result != False:
+            return result
+        else:
+            return False  # backtrack
+    elif action in methods: # new task
+        relevant = methods[action]
+        for method in relevant:
+        return False
+    return False
+
 def seek_plan(state, tasks, plan, depth, verbose=0):
     """
     Workhorse for pyhop_SeRPE. state and tasks are as in pyhop_SeRPE.
@@ -216,7 +235,7 @@ def seek_plan(state, tasks, plan, depth, verbose=0):
     if task1[0] in operators:
         if verbose > 2: print('depth {} action {}'.format(depth, task1))
         operator = operators[task1[0]]
-        newstate = operator(copy.deepcopy(state), *task1[1:])
+        newstate = operator(copy.deepcopy(state), *task1[1:])  # perform action??? <peratham>
         if verbose > 2:
             print('depth {} new state:'.format(depth))
             print_state(newstate)
@@ -228,7 +247,9 @@ def seek_plan(state, tasks, plan, depth, verbose=0):
         if verbose > 2: print('depth {} method instance {}'.format(depth, task1))
         relevant = methods[task1[0]]
         for method in relevant:
-            subtasks = method(state, *task1[1:])
+            result_dict = method(state, *task1[1:])
+            state = result_dict['state'] if result_dict['state'] != False else state 
+            subtasks = result_dict['subtasks']
             # Can't just say "if subtasks:", because that's wrong if subtasks == []
             if verbose > 2:
                 print('depth {} new tasks: {}'.format(depth, subtasks))
