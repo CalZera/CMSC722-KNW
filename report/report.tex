@@ -7,6 +7,7 @@
 \documentclass[11pt]{article} % use larger type; default would be 10pt
 
 \usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{alltt}
 
 %%% Examples of Article customizations
 % These packages are optional, depending whether you want the features they provide.
@@ -128,7 +129,54 @@ We made a situation where \texttt{travel\_by\_taxi} can cause failure because
 the money is not enough. So, we add a refinement action \texttt{go\_to\_bank}
 which will help increase the money and execute the \texttt{travel} task again.
 
-%% TODO code screenshots
+Below is the code for \texttt{execute\_action}:
+
+{\small
+\begin{alltt}
+def execute_action(action, state, old_state, *action_args):
+    if state == False:
+        return False
+    if action in operators:  # predict action
+        operator = operators[action]       
+        if len(action_args) > 1: # deal with the training comma in the tuple
+            result = eval('operator(copy.deepcopy(state),action_args)')
+        else:
+            result = eval('operator(copy.deepcopy(state),action_args[0])')
+        if result != False:
+            return result
+        else:
+            return False  # backtrack
+    elif action in methods: # new task
+        relevant = methods[action]
+        for method in relevant:
+        return False
+    return False
+\end{alltt}}
+
+And here is how \texttt{travel\_by\_taxi} uses it:
+{\small
+\begin{alltt}
+def travel_by_taxi(state, a, x, y):
+    import copy
+    if state.cash[a] >= taxi_rate(state.dist[x][y]):
+        result = copy.deepcopy(state)
+        result = pyhop_SeRPE.execute_action('call_taxi', result, state, (a, x))
+        result = pyhop_SeRPE.execute_action('ride_taxi', result, state, (a, x, y))
+        result = pyhop_SeRPE.execute_action('pay_driver', result, state, (a))
+        subtasks = [('call_taxi', a, x),
+                    ('ride_taxi', a, x, y),
+                    ('pay_driver', a)]
+                   if result != False else False
+        return \{'state':result, 'subtasks':subtasks\}
+    else:
+        result = copy.deepcopy(state)
+        result = pyhop_SeRPE.execute_action('go_to_bank', result, state, (a))
+        result = pyhop_SeRPE.execute_action('travel', result, state, (a, x, y))
+        subtasks = [('go_to_bank', a),
+                    ('travel', a, x, y)]
+                   if result != False else False
+        return \{'state':result, 'subtasks':subtasks\}
+\end{alltt}}
 
 \section{Conclusion}
 
