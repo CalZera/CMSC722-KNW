@@ -99,9 +99,10 @@ First, we modified the use of HTN by replacing subtasks with
 body. Body can be any kind of program which consists of
  Python statements like if-else or while-loop.
 Second, we use Python's `eval' function to implement the 
-backtracking in execution stack for SeRPE. The execution 
-stack will be similar to what already in Pyhop except that
-it will be used in the method's body.
+backtracking in execution stack for SeRPE. This will be a 
+description action model for SeRPE rather than just execute
+ the action in RAE. The execution stack will be similar to what
+ already in Pyhop except that it will be used in the method's body.
 
 \section{Implementation}
 
@@ -110,6 +111,10 @@ Our implementation is available online at
 \href{https://github.com/yakatz/CMSC722-KNW/tree/master/src}
 {\tt https://github.com/yakatz/CMSC722-KNW/tree/master/src}
 \end{center}
+
+For an example, we modified the simple_travel_example given in Pyhop.
+We made a situation where travel_by_taxi can cause failure because
+the money is not enough. So, we add
 
 %% TODO code screenshots
 
