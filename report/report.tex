@@ -89,9 +89,8 @@ Pyhop represents states of the world using Python variable binding
  just Python functions with the current state as an argument.
 
 %% TODO what is SePRE
-\textbf{Sequential Refinement Planning (SeRPE)} finds the best plan,
- which consists of an action sequence, for a refinement planning. 
-Instead of an effect, a refinement planning will have a body which
+\textbf{Sequential Refinement Planning (SeRPE)} is an improvement to Refinement Planning. Refinement Planning algorithms may need to make choices to determine what their next course of action will be. At each choice, SeRPE looks at all the available choices and using descriptive models, attempts to predict the outcome of each possible action.
+Instead of considering each action having a particular effect (like HTN), a refinement planning will have a body which
  is a program. The program can have assignments, actions, tasks or
  even some control structures like if-then-else or while-loop.
 
@@ -99,6 +98,11 @@ SeRPE assumes all actions to be deterministic and all methods are
 sequential and cannot be executed in parallel.
 
 \section{Related work}
+There is a long history of planning software for a variety of different algorithms. One of the first HTN planners was published in 1975.
+\begin{itemize}
+  \item Pyhop. HTN Planner on which our SeRPE implementation is based. \cite{pyhop}
+  
+\end{itemize}
 
 \section{Approach}
 We made an attempt to extend Pyhop to behave like SeRPE. 
