@@ -16,7 +16,7 @@ def walk(state, a, x, y):
     else: return False
 
 def go_to_bank(state, a):
-    state.cash[a] = state.cash[a] + 5
+    state.cash[a] = state.cash[a] + 1
     return state
 
 def call_taxi(state, a, x):
@@ -46,14 +46,29 @@ pyhop_SeRPE.print_operators()
 
 def travel_by_foot(state, a, x, y):
     if state.dist[x][y] <= 2:
-        return [('walk', a, x, y)]
-    return False
+        result = pyhop_SeRPE.execute_action('walk(state, a, x, y)', state)
+        subtasks = [('walk', a, x, y)]
+        return {'state':result, 'subtasks':subtasks}
+        # return [('walk', a, x, y)] # use eval
+    return {'state':False, 'subtasks':False}
 
 def travel_by_taxi(state, a, x, y):
+    import copy
     if state.cash[a] >= taxi_rate(state.dist[x][y]):
-        return [('call_taxi', a, x), ('ride_taxi', a, x, y), ('pay_driver', a)]
+        result = copy.deepcopy(state)
+        result = pyhop_SeRPE.execute_action('call_taxi', result, state, (a, x))
+        result = pyhop_SeRPE.execute_action('ride_taxi', result, state, (a, x, y))
+        result = pyhop_SeRPE.execute_action('pay_driver', result, state, (a))
+        subtasks = [('call_taxi', a, x), ('ride_taxi', a, x, y), ('pay_driver', a)] if result != False else False
+        return {'state':result, 'subtasks':subtasks}
+        # return [('call_taxi', a, x), ('ride_taxi', a, x, y), ('pay_driver', a)]
     else:
-        return [('go_to_bank', a), ('travel', a, x, y)]
+        result = copy.deepcopy(state)
+        result = pyhop_SeRPE.execute_action('go_to_bank', result, state, (a))
+        result = pyhop_SeRPE.execute_action('travel', result, state, (a, x, y))
+        subtasks = [('go_to_bank', a), ('travel', a, x, y)]  if result != False else False
+        return {'state':result, 'subtasks':subtasks}
+#         return False # [('go_to_bank', a), ('travel', a, x, y)]
 
 pyhop_SeRPE.declare_methods('travel', travel_by_foot, travel_by_taxi)
 print('')
@@ -71,14 +86,14 @@ Call pyhop_SeRPE.pyhop_SeRPE(state1,[('travel','me','home','park')]) with differ
 ********************************************************************************
 """)
 
-print("- If verbose=0 (the default), pyhop_SeRPE returns the solution but prints nothing.\n")
-pyhop_SeRPE.pyhop_SeRPE(state1, [('travel', 'me', 'home', 'park')])
-
-print('- If verbose=1, pyhop_SeRPE prints the problem and solution, and returns the solution:')
-pyhop_SeRPE.pyhop_SeRPE(state1, [('travel', 'me', 'home', 'park')], verbose=1)
-
-print('- If verbose=2, pyhop_SeRPE also prints a note at each recursive call:')
-pyhop_SeRPE.pyhop_SeRPE(state1, [('travel', 'me', 'home', 'park')], verbose=2)
+# print("- If verbose=0 (the default), pyhop_SeRPE returns the solution but prints nothing.\n")
+# pyhop_SeRPE.pyhop_SeRPE(state1, [('travel', 'me', 'home', 'park')])
+# 
+# print('- If verbose=1, pyhop_SeRPE prints the problem and solution, and returns the solution:')
+# pyhop_SeRPE.pyhop_SeRPE(state1, [('travel', 'me', 'home', 'park')], verbose=1)
+# 
+# print('- If verbose=2, pyhop_SeRPE also prints a note at each recursive call:')
+# pyhop_SeRPE.pyhop_SeRPE(state1, [('travel', 'me', 'home', 'park')], verbose=2)
 
 print('- If verbose=3, pyhop_SeRPE also prints the intermediate states:')
 pyhop_SeRPE.pyhop_SeRPE(state1, [('travel', 'me', 'home', 'park')], verbose=3)
