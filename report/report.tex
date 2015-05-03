@@ -67,7 +67,7 @@
 
 \begin{abstract}
 In this project, we implement a Sequential Refinement Planning Engine
-(SeRPE)~\cite{disgusting-draft} for PyHOP~\cite{pyhop},
+(SeRPE)~\cite{disgusting-draft} for Pyhop~\cite{pyhop},
 a simple planner written in Python.
 \end{abstract}
 
@@ -81,8 +81,12 @@ by decomposing the problem into subtasks.
 A task network contains primitive tasks, which can be directly executed,
 compound tasks, each of which is a sequence of actions,
 and goal tasks, each of which satisfies a condition.
+
 %% TODO what is Pyhop
-PyHOP is a simple implementation of HTN written in Python.
+Pyhop is a simple implementation of HTN written in Python. 
+Pyhop represents states of the world using Python variable binding
+ instead of logical propositions. Operators and methods in Pyhop are
+ just Python functions with the current state as an argument.
 
 %% TODO what is SePRE
 
@@ -90,6 +94,7 @@ PyHOP is a simple implementation of HTN written in Python.
 \section{Related work}
 
 \section{Approach}
+We made an attempt to extend Pyhop to behave like SeRPE.
 
 \section{Implementation}
 
@@ -103,7 +108,7 @@ Our implementation is available online at
 
 \section{Conclusion}
 
-We have implemented SePRE for Pyhop.
+We have implemented a Pyhop extension for SePRE.
 
 \bibliographystyle{plain}
 \bibliography{report}
