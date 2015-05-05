@@ -7,15 +7,16 @@ This file should work correctly in both Python 2.7 and Python 3.2.
 import pyhop_SeRPE
 
 def taxi_rate(dist):
-    return (10.5 + 0.5 * dist)
+    return (8 + 0.5 * dist)
 
 def walk(state, a, x, y):
+    state.cash[a] = state.cash[a] - 1
     if state.loc[a] == x:
         state.loc[a] = y
         return state
     else: return False
 
-def go_to_bank(state, a):
+def get_cash(state, a):
     state.cash[a] = state.cash[a] + 1
     return state
 
@@ -38,7 +39,7 @@ def pay_driver(state, a):
         return state
     else: return False
 
-pyhop_SeRPE.declare_operators(walk, call_taxi, ride_taxi, pay_driver, go_to_bank)
+pyhop_SeRPE.declare_operators(walk, call_taxi, ride_taxi, pay_driver, get_cash)
 print('')
 pyhop_SeRPE.print_operators()
 
@@ -63,10 +64,14 @@ def travel_by_taxi(state, a, x, y):
         return {'state':result, 'subtasks':subtasks}
         # return [('call_taxi', a, x), ('ride_taxi', a, x, y), ('pay_driver', a)]
     else:
+        return go_to_bank(state, a, x, y)
+    
+def go_to_bank(state, a, x, y):
+        import copy
         result = copy.deepcopy(state)
-        result = pyhop_SeRPE.execute_action('go_to_bank', result, state, (a))
+        result = pyhop_SeRPE.execute_action('get_cash', result, state, (a))
         result = pyhop_SeRPE.execute_action('travel', result, state, (a, x, y))
-        subtasks = [('go_to_bank', a), ('travel', a, x, y)]  if result != False else False
+        subtasks = [('get_cash', a), ('travel', a, x, y)]  if result != False else False
         return {'state':result, 'subtasks':subtasks}
 #         return False # [('go_to_bank', a), ('travel', a, x, y)]
 
