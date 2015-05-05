@@ -206,17 +206,43 @@ def execute_action(action, state, old_state, *action_args):
         return False
     if action in operators:  # predict action
         operator = operators[action]       
-        if len(action_args) > 1: # deal with the training comma in the tuple
-            result = eval('operator(copy.deepcopy(state),action_args)')
+        if len(action_args) > 1:  # deal with the training comma in the tuple
+            result = eval('operator(copy.deepcopy(state),*action_args)')
         else:
-            result = eval('operator(copy.deepcopy(state),action_args[0])')
+            if (type(action_args[0]) is tuple):
+                result = eval('operator(copy.deepcopy(state), *action_args[0])')
+            else:
+                result = eval('operator(copy.deepcopy(state), action_args[0])')
         if result != False:
             return result
         else:
             return False  # backtrack
-    elif action in methods: # new task
+    elif action in methods:  # new task
         relevant = methods[action]
         for method in relevant:
+            if len(action_args) > 1:  # deal with the training comma in the tuple
+                result = eval('method(copy.deepcopy(state), *action_args)')
+            else:
+                if (type(action_args[0]) is tuple):
+                    result = eval('method(copy.deepcopy(state), *action_args[0])')
+                else:
+                    result = eval('method(copy.deepcopy(state), action_args[0])')
+        if result != False:
+            newstate = result['state'] if result['state'] != False else state 
+            subtasks = result['subtasks']
+            if subtasks == False:
+                return False
+            if len(action_args) > 1:  # deal with the training comma in the tuple
+                newlist = subtasks #+ [list(i) for i in action_args]
+                solution = eval('seek_plan(newstate, newlist),[],0')
+            else:
+                newlist = subtasks #+ [action_args[0]]
+                solution = eval('seek_plan(newstate, newlist,[],0)')
+            if solution != False:
+                return solution
+            return newstate
+        else:
+            return False  # backtrack
         return False
     return False
 
@@ -248,7 +274,7 @@ def seek_plan(state, tasks, plan, depth, verbose=0):
         relevant = methods[task1[0]]
         for method in relevant:
             result_dict = method(state, *task1[1:])
-            state = result_dict['state'] if result_dict['state'] != False else state 
+            newstate = result_dict['state'] if result_dict['state'] != False else state 
             subtasks = result_dict['subtasks']
             # Can't just say "if subtasks:", because that's wrong if subtasks == []
             if verbose > 2:
